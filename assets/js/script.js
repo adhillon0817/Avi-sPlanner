@@ -10,6 +10,7 @@ $("#currentDay").text(currentTime.format('MMMM Do YYYY, h:mm:ss a'));
 // Declare time enteries container element Line 31 in index)
 // Render a block for each hour of the day
 // Standard business hours - Line 14
+// Hour for each line - Line 20
 // Save button - line 22
 // Time enteries - line 29
 
@@ -24,7 +25,6 @@ for(var i = 9; i <= 17; i++) {
    <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button> 
  </div>`;
  
-
 
  $("#timeEnteries").append(timeBlock)
 }
