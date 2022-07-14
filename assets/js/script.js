@@ -1,30 +1,26 @@
 // console.log("hello from file");
 
-// Declare Current Time (Day 3 - Week 5 class work) - Line 7
+// Declare Current Time (Day 3 - Week 5 class work)
 var currentTime = moment();
 var timeEnteries = document.querySelector
 var currentHour = currentTime.hour();
 $("#currentDay").text(currentTime.format('MMMM Do YYYY, h:mm:ss a'));
 // Add event listeners
-// Declare Current Day elements - Line 7
-// Declare time enteries container element Line 31 in index)
-// Render a block for each hour of the day
-// Standard business hours - Line 14
-// Hour for each line - Line 20
-// Save button - line 22
-// Time enteries - line 29
+// Local Storage - line 29
 
-
+//Standard Business Hours
 for(var i = 9; i <= 17; i++) {
-   var timeBlock = `<div class="row time-block">
+//Created Block for standard Business hours
+var timeBlock = `<div class="row time-block">
    <div id=hour-${i} class="col-md-1 hour">
      ${i}
-   </div>     
+     </div>    
    <textarea class="col-md-9 description">
-   </textarea>
+   </textarea> 
    <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button> 
  </div>`;
- 
+ //Above second to last line is for save button
+ //<textarea class="col-md-9 description"> line is for the text area.
 
  $("#timeEnteries").append(timeBlock)
 }
