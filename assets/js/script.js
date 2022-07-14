@@ -6,7 +6,6 @@ var timeEnteries = document.querySelector
 var currentHour = currentTime.hour();
 $("#currentDay").text(currentTime.format('MMMM Do YYYY, h:mm:ss a'));
 // Add event listeners
-// Local Storage - line 29
 
 //Standard Business Hours
 for(var i = 9; i <= 17; i++) {
@@ -20,9 +19,15 @@ var timeBlock = `<div class="row time-block">
    <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button> 
  </div>`;
  //Above second to last line is for save button
- //<textarea class="col-md-9 description"> line is for the text area.
+ // the following code: <textarea class="col-md-9 description"> line is for the text area.
 
  $("#timeEnteries").append(timeBlock)
-}
 
+//Local Storage
 // Save an hour to local storage 
+// $("#hour9 . decription").var(localStorage.getItem("9"));
+
+// viewing items in local storage
+// window.localStorage.getItem('');
+
+}
