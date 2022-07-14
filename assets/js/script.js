@@ -24,11 +24,15 @@ var timeBlock = `<div class="row time-block">
  $("#timeEnteries").append(timeBlock)
 }
 
+
+
+
 //Local Storage
 // Save an hour to local storage 
-localStorage.setItem("description", currentTime.hour();
+// localStorage.setItem("description", currentTime.hour();
 
 // viewing items in local storage
-var x = localStorge.getItem("description");
+// var x = localStorge.getItem("description");
 
 
+// Add event listeners
