@@ -22,12 +22,13 @@ var timeBlock = `<div class="row time-block">
  // the following code: <textarea class="col-md-9 description"> line is for the text area.
 
  $("#timeEnteries").append(timeBlock)
+}
 
 //Local Storage
 // Save an hour to local storage 
-// $("#hour9 . decription").var(localStorage.getItem("9"));
+localStorage.setItem("description", currentTime.hour();
 
 // viewing items in local storage
-// window.localStorage.getItem('');
+var x = localStorge.getItem("description");
 
-}
+
