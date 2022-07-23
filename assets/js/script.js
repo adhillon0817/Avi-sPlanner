@@ -10,12 +10,14 @@ $("#currentDay").text(currentTime.format('MMMM Do YYYY, h:mm:ss a'));
 
 console.log("current:" +currentHour);
 
-localStorage.setItem(currentTime, )
+localStorage.setItem(currentTime, currentHour);
+
 function pastPresentFuture(){
   //Iterate through databox length to evaluate dataset.hour to the currentHour and add class of past present or future.
 
   for (let index = 0; index < databox.length; index++) {
    var hourBack =databox[index].dataset.hour;
+   
    if (currentHour < hourBack) {
     // add future class to the data box
     databox[index].classList.add("future");
