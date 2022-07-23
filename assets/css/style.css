@@ -6,7 +6,8 @@ body {
 
 textarea {
   background: transparent;
-  border: none;
+  /* If is type in black all the way my chart erases but if I want black borders they only show with "bl" */
+  border: bl;
   resize: none;
   color: #000000;
   border-left: 1px solid black;

@@ -4,28 +4,36 @@
 var currentTime = moment();
 var timeEnteries = document.querySelector
 var currentHour = currentTime.hour();
+var databox = document.getElementsByTagName("textarea");
 $("#currentDay").text(currentTime.format('MMMM Do YYYY, h:mm:ss a'));
 // Add event listeners
 
-//Standard Business Hours
-for(var i = 9; i <= 17; i++) {
-//Created Block for standard Business hours
-var timeBlock = `<div class="row time-block">
-   <div id=hour-${i} class="col-md-1 hour">
-     ${i}
-     </div>    
-   <textarea class="col-md-9 description">
-   </textarea> 
-   <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button> 
- </div>`;
- //Above second to last line is for save button
- // the following code: <textarea class="col-md-9 description"> line is for the text area.
+console.log("current:" +currentHour);
 
- $("#timeEnteries").append(timeBlock)
-}
+localStorage.setItem(currentTime, )
+function pastPresentFuture(){
+  //Iterate through databox length to evaluate dataset.hour to the currentHour and add class of past present or future.
+
+  for (let index = 0; index < databox.length; index++) {
+   var hourBack =databox[index].dataset.hour;
+   if (currentHour < hourBack) {
+    // add future class to the data box
+    databox[index].classList.add("future");
+   }
+   else if(currentHour > hourBack){
+      //add past class to data box
+    databox[index].classList.add("past");
+   }
+   else{
+    //add present class to data box
+    databox[index].classList.add("present");
+   }
+
+  }
+} 
 
 
-
+pastPresentFuture();
 
 //Local Storage
 // Save an hour to local storage 
@@ -33,6 +41,5 @@ var timeBlock = `<div class="row time-block">
 
 // viewing items in local storage
 // var x = localStorge.getItem("description");
-
 
 // Add event listeners
